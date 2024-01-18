@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JS</title>
+</head>
+<body>
+<script>
+    let apple = 10;
+    alert(apple);
+    let condition = "Baldur's Gate 3";
+    console.log('Good game is ' + condition);
+
+    let num = 333;
+    let str = '100';
+    let bul = true;
+    console.log(num + num)
+    console.log(num + str)
+    console.log(num + bul)
+    console.log(str + str)
+    console.log(str + bul)
+    console.log(bul + bul)
+
+    let list = [];
+    for (let i = 0; i < 10; i++)
+    {
+        list[i] = -5 + i;
+    }
+    console.log('Исходный список: ' + list)
+    list = list.filter(function(element){
+        return element >= 0;
+    });
+    console.log('Список больше 0: ' + list);
+
+    function randomNumber() {
+        var randNum = Math.floor(Math.random() * (25)) + 1;
+        return randNum;
+    }
+    console.log(randomNumber());
+
+    function second(arr, num)
+    {
+        return arr.map(function(element)
+        {
+            return element*num;
+        })
+    }
+    let newList = [ 3, 2, 4, 5 ];
+    let finalArray = second(newList, 3);
+    console.log(finalArray);
+
+    let anonim = function()
+    {
+        let sl  = [ 'Молоко', 'Картон', 'Г.Гессе', 'Гарфилд', 'Тарелка', 'Меч' ];
+        var randomIndex = Math.floor(Math.random() * sl.length);
+        return sl[randomIndex];
+    }
+    console.log(anonim());
+
+
+
+    const person = {
+        firstName: 'Александр',
+        surname: 'Дугин',
+        patronymic: 'Гельевич',
+        birthday: 1962,
+        hobby: 'Общественная деятельность',
+        group : 'Философ',
+        out()
+        {
+            alert('ФИО: ' + this.surname + ' ' + this.firstName + ' ' + this.patronymic + ' ' + this.birthday + ' года рождения. Интересы: ' + this.hobby + '. Возраст философа: ' + (2023 - this.birthday));
+        }
+    };
+    person.out();
+
+    const zarpl = {
+        "Шестаков Д.Г": 70000,
+        "Литвинков Н.С.": 25000,
+        "Васюткин И.А.": 102000,
+        "Федорова П.Е.": 64500,
+        "Полев Р.С.": 66000,
+        "Задорожная П.Р.": 200000,
+        "Хорьков Е.А.": 10100,
+        "Бондаренко Е.А.": 26500,
+        "Савкин А.Ю": 360000,
+        "Кузьмина Ю.И.": 23700
+    }
+
+    let total = 0;
+    for (const surname in zarpl)
+    {
+        if (zarpl.hasOwnProperty(surname)) {
+            total += zarpl[surname];
+        }
+    }
+    console.log("Общая заработная плата: " + total);
+
+    /*
+    Вопросы к заданию 1
+    1.оператор let.
+    2. var, const, let.
+    var - более старый оператор, при объявлении переменная имеет функциональную или глобальную область видимости, нет блочной видимости
+    let - ограниченф областью видимости блока
+    const - имеет блочную видимость, значение после создания переменной изменить нельзя
+    3. при вызове alert() в блаузере отображается окно с информацией, которую вписали в кач. аргумента
+    4.console.log() мб использована для отладки, отслеживания значений переменных
+*/ 
+</script>
+</body>
+</html>
