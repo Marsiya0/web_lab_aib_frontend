@@ -1,0 +1,23 @@
+html {
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    background-color: #d2f8f5;
+  }
+  
+  button {
+    border: 5px solid #272020;
+    padding: 25px 50px;
+    color: white;
+    font-weight: 900;
+    font-size: 30px;
+    text-transform: uppercase;
+    background-color: rgb(46, 41, 117);
+    cursor: pointer;
+  }
