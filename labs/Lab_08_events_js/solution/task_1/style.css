@@ -1,0 +1,40 @@
+html
+{
+  max-width: 100%;
+}
+
+.buttons{
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  margin-top: 320px;
+}
+
+button{
+  border: white;
+  color: aliceblue;
+  font-size: 30px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  padding: 25px;
+  border-radius: 10px
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+#Red button{
+  margin-right: 30px;
+  background-color: red;
+}
+
+#Green button{
+  background-color: green;
+}
+
+#Blue button{
+  margin-left: 30px;
+  background-color: blue;
+  padding-left: 37px;
+  padding-right: 37px;
+}
